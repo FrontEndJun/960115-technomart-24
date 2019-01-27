@@ -2,12 +2,12 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Техномарт</title>
+    <title>Техномарт  интернет-магазин стройматериалов и инструмента</title>
   </head>
   <body>
     <header>
-      <div class="main-header-up">
-        <a class="main-header--logo">
+      <div class="main-header--up">
+        <a class="main-header-logo">
           <img src="img/index-logo.svg" width="" height="" alt="Логотип Техномарт">
         </a>
         <input type="search" name="search" placeholder="Поиск:" autocomplete="off">
@@ -18,7 +18,7 @@
         </ul>
       </div>
 
-      <div class="main-header-center">
+      <div class="main-header--center">
         <h1>
         Интернет-магазин<br>
         строительных материалов<br>
@@ -34,7 +34,7 @@
         </ul>
       </div>
 
-      <div class="main-header-down">
+      <div class="main-header--down">
         <nav class="main-navigation">
           <ul class="site-navigation">
             <li> <a >Главная</a> </li>
@@ -51,42 +51,62 @@
     </header>
 
   <main>
-    <section class="Services">
-      <h2>Сервисы</h2>
-      <p>
-        Хороший интернет-магазин отличается от плохого не только ценами!
-        Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
-      </p>
-      <ul class="features">
-        <li>Доставка</li>
-        <li>Гарантия</li>
-        <li>Кредит</li>
-      </ul>
-      <h3 class="shipping-service"> Доставка</h3>
-      <p>
-        Мы с удовольствием доставим ваш товар прямо
-        к вашему подъезду совершенно бесплатно!
-        Ведь мы неплохо заработаем,
-        поднимая его на ваш этаж!
-      </p>
-    </section>
+    <!--<section class="services">-->
+      <!--<h2>Сервисы</h2>-->
+      <!--<p>-->
+        <!--Хороший интернет-магазин отличается от плохого не только ценами!-->
+        <!--Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.-->
+      <!--</p>-->
+      <!--<ul class="features">-->
+        <!--<li>Доставка</li>-->
+        <!--<li>Гарантия</li>-->
+        <!--<li>Кредит</li>-->
+      <!--</ul>-->
+      <!--<h3 class="shipping-service"> Доставка</h3>-->
+      <!--<p>-->
+        <!--Мы с удовольствием доставим ваш товар прямо-->
+        <!--к вашему подъезду совершенно бесплатно!-->
+        <!--Ведь мы неплохо заработаем,-->
+        <!--поднимая его на ваш этаж!-->
+      <!--</p>-->
+    <!--</section>-->
 
-    <section class="about-us">
-      <h2>КОМПАНИЯ «Техномарт»</h2>
-      <p>
-        Настоящий мужской шоппинг начинается здесь!
-        Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.
-      </p>
-      <p>
-        Мы можем доставить ваш товар в самые отдаленные точки России!
-        Техномарт работает со многими транспортными компаниями:
-      </p>
-      <ul class="about-shipping">
-        <li>Деловые линии</li>
-        <li>Автотрейдинг</li>
-        <li>ЖелДорЭкспедиция</li>
-      </ul>
-      <a class="button button-about-us" href="#">Подробнее о компании</a>
+    <section class="company-details">
+      <div class="about-us">
+        <h2 class="visually-hidden">О нас</h2>
+        <b>КОМПАНИЯ «Техномарт»</b>
+        <p>
+          Настоящий мужской шоппинг начинается здесь!
+          Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.
+        </p>
+
+
+        <div class="about-shippng">
+          <h2 class="visually-hidden">Доставка</h2>
+          <p>
+            Мы можем доставить ваш товар в самые отдаленные точки России! <br>
+            Техномарт работает со многими транспортными компаниями:
+          </p>
+          <ul class="shipping-methods">
+            <li>Деловые линии</li>
+            <li>Автотрейдинг</li>
+            <li>ЖелДорЭкспедиция</li>
+          </ul>
+        </div>
+        <a class="button details-about-us" href="#">Подробнее о компании</a>
+      </div>
+
+      <div class="contacts-in-main">
+        <h2>Контакты</h2>
+        <p>
+          Вы можете забрать товар сами,<br>
+          заехав в наш офис:
+        </p>
+        <a class="map" href="#">
+          <img src="#" alt="Где нас найти?">
+        </a>
+        <a class="button write-us-button" href="#"> Заблудились? Напишите нам</a>
+      </div>
     </section>
 
 
@@ -94,7 +114,7 @@
 
    <footer>
      <div class="footer-up">
-       <div class="footer-up__upper">
+       <div class="footer-up--upper">
          <a href="#top">
            <img src="footer-logo.svg" alt="Техномарт">
          </a>
@@ -107,8 +127,8 @@
          </ul>
        </div>
 
-       <div class="footer-up__lower">
-         <b class="footer-down__contacts">
+       <div class="footer-up--lower">
+         <b class="footer-contacts">
            г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
            +7 (812) 555-05-55
          </b>
