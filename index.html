@@ -123,25 +123,115 @@
     </header>
 
     <main>
-      <!--<section class="services">-->
-        <!--<h2>Сервисы</h2>-->
-        <!--<p>-->
-          <!--Хороший интернет-магазин отличается от плохого не только ценами!-->
-          <!--Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.-->
-        <!--</p>-->
-        <!--<ul class="features">-->
-          <!--<li>Доставка</li>-->
-          <!--<li>Гарантия</li>-->
-          <!--<li>Кредит</li>-->
-        <!--</ul>-->
-        <!--<h3 class="shipping-service"> Доставка</h3>-->
-        <!--<p>-->
-          <!--Мы с удовольствием доставим ваш товар прямо-->
-          <!--к вашему подъезду совершенно бесплатно!-->
-          <!--Ведь мы неплохо заработаем,-->
-          <!--поднимая его на ваш этаж!-->
-        <!--</p>-->
-      <!--</section>-->
+
+      <section class="popular">
+        <div class="popular__title">
+          <h2>Популярные товары:</h2>
+          <a href="#">Все популярные товары</a>
+        </div>
+        <ul class="popular__items" >
+          <li class="catalog__item c-item">
+            <img class="c-item__photo" src="img/bfg_9000.jpg" alt="Перфоратор BOSCH BFG 9000" >
+            <h3 class="c-item__title"> Перфоратор BOSCH BFG 9000</h3>
+            <span class="old-price">22500 Р.</span>
+            <p class="price">15500 Р.</p>
+          </li>
+
+          <li class="catalog__item c-item">
+            <img class="c-item__photo" src="img/bfg_3000.jpg" width="" height="" alt="Перфоратор BOSCH BFG 3000" >
+            <h3 class="c-item__title"> Перфоратор BOSCH BFG 3000</h3>
+            <span class="old-price">22500 Р.</span>
+            <p class="price">15500 Р.</p>
+          </li>
+
+          <li class="catalog-item">
+            <img class="item-photo" src="img/bfg_6000.jpg" width="" height="" alt="Перфоратор BOSCH BFG 6000" >
+            <h3 class="catalog-item-title"> Перфоратор BOSCH BFG 6000</h3>
+            <span class="old-price">33500 Р.</span>
+            <p class="price">25500 Р.</p>
+          </li>
+
+          <li class="catalog-item">
+              <!--<button class="button-buy" type="button">КУПИТЬ</button>-->
+              <!--<button class="button-to-favourite" type="button">В ЗАКЛАДКИ</button>-->
+            <img class="item-photo" src="img/bfg_2000.jpg" width="" height="" alt="Перфоратор BOSCH BFG 2000" >
+            <h3 class="catalog-item-title"> Перфоратор BOSCH BFG 2000</h3>
+            <p class="price">25500 Р.</p>
+          </li>
+        </ul>
+
+        <div class="popular__title">
+          <h2>Популярные производители:</h2>
+          <a href="#">Все производители</a>
+        </div>
+
+        <ul class="popular__brands">
+          <li>
+            <a href="#"> <img src="img/bosch.jpg" alt="Bosch"> </a>
+          </li>
+          <li>
+            <a href="#"> <img src="img/makita.jpg" alt="Makita"> </a>
+          </li>
+          <li>
+            <a href="#"> <img src="img/dewalt.jpg" alt="DeWalt"> </a>
+          </li>
+          <li>
+            <a href="#"> <img src="img/interscol.jpg" alt="Интерскол"> </a>
+          </li>
+          <li>
+            <a href="#"> <img src="img/hitachi.jpg" alt="Hitachi"> </a>
+          </li>
+          <li>
+            <a href="#"> <img src="img/lg.jpg" alt="LG"> </a>
+          </li>
+          <li>
+            <a href="#"> <img src="img/aeg.jpg" alt="AEG"> </a>
+          </li>
+          <li><a href="#"> <img src="img/metabo.jpg" alt="Metabo"> </a></li>
+        </ul>
+      </section>
+
+      <section class="services">
+        <h2>Сервисы</h2>
+        <p>
+        Хороший интернет-магазин отличается от плохого не только ценами!
+        Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
+        </p>
+
+        <button>Доставка</button>
+        <button>Гарантия</button>
+        <button>Кредит</button>
+
+        <div class="service">
+          <h3> Доставка</h3>
+          <p>
+            Мы с удовольствием доставим ваш товар прямо
+            к вашему подъезду совершенно бесплатно!
+            Ведь мы неплохо заработаем,
+            поднимая его на ваш этаж!
+          </p>
+          <img src="img/delivery.png" alt="">
+        </div>
+        <div class="service">
+          <h3> Гарантия</h3>
+          <p>
+            Если купленный у нас товар поломается или заискрит,
+            а также в случае пожара, спровоцированного его возгаранием,  вы всегда можете быть уверены в нашей гарантии.
+            Мы обменяем сгоревший товар на новый.<br>
+            Дом уж восстановите как-нибудь сами.
+          </p>
+          <img src="img/gurantie.png" alt="">
+        </div>
+        <div class="service">
+          <h3>Кредит</h3>
+          <p>
+            Залезть в долговую яму стало проще!
+            Кредитные консультанты придут вам на помощь.
+          </p>
+          <a href="#">Отправить заявку</a>
+          <img src="img/credit.png" alt="">
+        </div>
+      </section>
 
       <section class="info">
         <h2 class="visually-hidden">О нас</h2>
@@ -155,16 +245,17 @@
 
 
           <div class="about-shippng">
-            <h2 class="visually-hidden">Доставка</h2>
+            <h3 class="visually-hidden">Подробнее о доставке</h3>
             <p>
               Мы можем доставить ваш товар в самые отдаленные точки России! <br>
               Техномарт работает со многими транспортными компаниями:
+            </p>
               <ul class="shipping-methods">
                 <li>Деловые линии</li>
                 <li>Автотрейдинг</li>
                 <li>ЖелДорЭкспедиция</li>
               </ul>
-            </p>
+
           </div>
           <a class="more-button" href="#">Подробнее о компании</a>
         </div>
@@ -188,7 +279,7 @@
        <div class="footer__up block ">
          <div class="block__up">
            <div class="footer__logo">
-             <img src="img/logo-technomart.svg" alt="Техномарт">
+             <img src="img/svg/logo-technomart.svg" alt="Техномарт">
            </div>
            <ul class="info-navigation">
            <li class="info-navigation__item"> <a href="#">Компания</a> </li>
@@ -243,7 +334,7 @@
       <h2 class="visually-hidden">Как до нас добраться</h2>
       <img src="img/big_map.jpg" alt=" Мы находимся по адресу г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
        +7 (812) 555-05-55">
-      <input type="submit" value="Закрыть">
+      <input type="button" value="Закрыть" name="close-map">
     </section>
 
     <section class="modal modal-write-us">
