@@ -4,96 +4,176 @@
 /*}*/
 body{
   margin: 0;
+  padding: 0;
+
+  font-family: "Cuprum","PT Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #000000;
+  text-transform: none;
+  background-color: #fff;
+}
+
+a{
+  text-decoration: none;
 }
 
 header{
-width: 100%;
+  background-color: #f3f7f8;
 }
-.top-menu{
-  width: 100%;
-  height: 42px;
-  background-color: #293449;
 
+.top-menu{
+  background-color: #293449;
+  display: flex;
 }
+
 .top-menu__inner{
-  display: inline-flex;
-  margin-left: 130px;
+  display: flex;
+  align-items: stretch;
+}
+
+.top-menu-icon{
+  fill: #6a7180;
+}
+
+.top-menu a{
+  color: #ffffff;
+  font-size: 17px;
+  line-height: 18px;
 }
 
 .main-logo{
-  width:220px;
-  height: 42px;
-
-  box-sizing: border-box;
-  padding: 13px 55px;
   background-color: #ee3643;
-  box-shadow: 0px 5px 0px 0px #b52933;
+  box-shadow: 0 5px 0 0 #b52933;
 }
-/*.main-header--logo:hover{*/
-  /*background-color: #ca2c37;*/
-/*}*/
 
-/*.main-header--logo:active{*/
-  /*background-color: #ba2732;*/
-/*}*/
+.main-logo:hover{
+  background-color: #ca2c37;
+}
 
-/*.search-form{*/
-  /*width: 270px;*/
-  /*!*padding-left: 17px;*!*/
-  /*!*padding-top: 12px;*!*/
-  /*background-color: #293449;*/
-/*}*/
+.main-logo:active{
+  background-color: #ba2732;
+}
 
-/*.header__icon{*/
-  /*margin-left: 17px;*/
-  /*text-align: center;*/
-/*}*/
+.search-form:hover,
+.fav-link:hover,
+.cart-link:hover{
+  background-color: #212a3a;
+  fill: white;
+}
 
-/*.search-form:hover{*/
-  /*background-color: #212a3a;*/
-/*}*/
 
-/*.search-form:hover .search__icon path {*/
-  /*fill: white;*/
-/*}*/
 
-/*.search-form__input {*/
-  /*height: 100%;*/
-  /*border: none;*/
-  /*background-color: inherit;*/
-/*}*/
+.search-form:hover .search-icon,
+.fav-link:hover .fav-icon,
+.cart-link:hover .cart-icon{
+  fill: white;
+}
 
-/*input[type="search"]::-webkit-input-placeholder{*/
-  /*color: black;*/
-  /*font-size: 17px;*/
-/*}*/
+.fav-link:active,
+.cart-link:active{
+  background-color: #161d29;
+  color: #a2a5a9;
+}
 
-/*.search-form__input:focus::-webkit-input-placeholder{*/
-  /*color: red;*/
-/*}*/
+.fav-link:active .fav-icon,
+.cart-link:active .cart-icon{
+  fill: #8b8e94;
+}
 
-/*.search-form__input:focus {*/
-  /*outline: none;*/
-  /*background-color: white;*/
-/*}*/
+.checkout-link{
+  background-color: #63a63e;
+}
 
-/*.search-form .search-form__input:focus  {*/
-  /*background-color: white;*/
-/*}*/
+.checkout-link:hover{
+  background-color: #5fbb2d;
+}
 
-/*.search-form__input:focus .search__icon path {*/
-  /*fill: red;*/
-/*}*/
+.checkout-link:active{
+  background-color: #518534;
+  color: #a8c29a;
+}
 
-/*.top-menu__link-list{*/
-  /*display: inline-flex;*/
-  /*list-style: none;*/
-  /*margin: auto;*/
-  /*font-size: 17px;*/
-/*}*/
 
-/*.list-link__link{*/
-  /*text-decoration: none;*/
-  /*color: #ffffff;*/
-/*}*/
+.search-input{
+  background-color: inherit;
+  border-style: none;
+  color: #ffffff;
+  outline: none;
+}
 
+.search-input::-webkit-input-placeholder{
+  color: #ffffff;
+  font-size: 17px;
+  line-height: 18px;
+}
+
+.search-input:focus{
+  background-color: #fff;
+  color: #000;
+}
+
+.header-bottom h1{
+  color: #ee3643;
+  font-size: 16px;
+  line-height: 23px;
+  font-style: italic;
+}
+
+.header-phone{
+  width: 270px;
+  height: 45px;
+  color: #ee3643;
+  font-size: 21px;
+  line-height: 21px;
+  border: 3px solid #ffffff;
+}
+
+.header-adress{
+  color: #32425c;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.user-navigation{
+  list-style: none;
+}
+
+.user-navigation a {
+  background-color: #ffffff;
+  color: #000;
+
+  font-size: 21px;
+  line-height: 21px;
+}
+
+.user-navigation a:hover {
+  color: #ee3643;
+}
+
+.user-navigation a:active{
+  color: #b2b2b2;
+}
+
+.main-navigation{
+  background-color: #32425c;
+  box-shadow: 0 5px 0 0 #293449;
+}
+
+.main-navigation-list{
+  list-style: none;
+}
+
+.main-navigation-list a{
+  color: #ffffff;
+  font-size: 17px;
+  line-height: 17px;
+}
+
+.main-navigation-list a:hover{
+   background-color: #293449;
+ }
+.main-navigation-list a:active{
+  color: #8e939c;
+}
