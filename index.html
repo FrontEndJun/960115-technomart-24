@@ -3,7 +3,8 @@
     <head>
       <meta charset="utf-8">
       <title>Техномарт  интернет-магазин стройматериалов и инструмента</title>
-      <link href="https://fonts.googleapis.com/css?family=Cuprum|PT+Sans&amp;subset=cyrillic" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Cuprum&amp;subset=cyrillic" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=PT+Sans&amp;subset=cyrillic" rel="stylesheet">
       <link rel="stylesheet" href="css/normalize.css" >
       <link rel="stylesheet" href="css/style.css" >
     </head>
@@ -345,12 +346,13 @@
               заехав в наш офис:
             </p>
 
-            <a class="map" onclick="openMap();" href="##"  >
+            <a class="map" onclick="event.preventDefault(); openMap();" href="#"  >
               <img src="img/lil-map.jpg" alt=" Мы находимся по адресу г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
           +7 (812) 555-05-55" width="300" height="158">
             </a>
 
-            <button class="button write-us-button button-red" onclick="openFeedback();" > Заблудились? Напишите
+            <button class="button write-us-button button-red" onclick="event.preventDefault(); openFeedback();"
+            > Заблудились? Напишите
               нам</button>
           </section>
         </div>
@@ -426,7 +428,7 @@
 
 
       <section  class=" modal popup-map ">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533238!2d30.320858716078195!3d59.938716481876206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1550059396288" width="940" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533238!2d30.320858716078195!3d59.938716481876206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1550059396288" width="940" height="450"   allowfullscreen></iframe>
         <h2 class="visually-hidden">Как до нас добраться</h2>
 
         <button onclick="closeMap();" class="close"></button>

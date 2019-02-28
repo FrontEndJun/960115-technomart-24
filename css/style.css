@@ -1619,6 +1619,10 @@ footer{
   border-top: none ;
 }
 
+.popup-map > iframe{
+  border: 0;
+}
+
 .close{
   position: absolute;
   top: 9px;
