@@ -907,7 +907,7 @@ a.login-link:active::before{
   position: absolute;
   width: 60px;
   height: 60px;
-  top: 0x;
+  top: 0;
   right: 0;
 
   background-image: url("../img/new-label.png");
