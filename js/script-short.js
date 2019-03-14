@@ -1,1 +1,121 @@
-var modal,userName,userEmail,slides=document.getElementsByName("promo-slider"),isLocalStorage=!0,currentSlide=0,buttonBuy=document.querySelectorAll(".action-buy"),writeUsLink=document.querySelector(".write-us-button"),mapLink=document.querySelector(".map"),nextSlideButton=document.querySelector(".next-slide"),previousSlideButton=document.querySelector(".prev-slide"),form=document.querySelector(".modal-write-us form");try{userName=localStorage.getItem("name"),userEmail=localStorage.getItem("mail")}catch(a){isLocalStorage=!1}writeUsLink&&writeUsLink.addEventListener("click",function(a){a.preventDefault(),modal=document.querySelector(".modal-write-us"),modal.style.animation="modal-open 0.5s",modal.classList.add("modal-show"),modal.querySelector("input[name=name]").focus(),isLocalStorage&&(userName&&(modal.querySelector("input[name=name]").value=userName,modal.querySelector("input[name=mail]").focus()),userEmail&&(modal.querySelector("input[name=mail]").value=userEmail,modal.querySelector("textarea[name=letter-text]").focus())),modal.querySelector(".close").addEventListener("click",function(a){a.preventDefault(),modal.classList.remove("modal-show")})}),mapLink&&mapLink.addEventListener("click",function(a){a.preventDefault(),modal=document.querySelector(".popup-map"),modal.classList.add("modal-show"),modal.querySelector(".close").addEventListener("click",function(a){a.preventDefault(),modal.classList.remove("modal-show")})});for(var btn,i=0;i<buttonBuy.length;i++)btn=buttonBuy[i],btn.addEventListener("click",function(a){a.preventDefault(),modal=document.querySelector(".modal-order"),modal.classList.add("modal-show"),modal.querySelector(".close").addEventListener("click",function(a){a.preventDefault(),modal.classList.remove("modal-show")}),modal.querySelector(".continue-shopping").addEventListener("click",function(a){a.preventDefault(),modal.classList.remove("modal-show")})});function check(){for(var a=0;a<slides.length;a++)slides[a].checked&&(currentSlide=a)}previousSlideButton.addEventListener("click",function(a){a.preventDefault(),check(),++currentSlide>=slides.length&&(currentSlide=0),slides[currentSlide].checked=!0}),nextSlideButton.addEventListener("click",function(a){a.preventDefault(),check(),0>--currentSlide&&(currentSlide=slides.length-1),slides[currentSlide].checked=!0}),window.addEventListener("keydown",function(a){27===a.keyCode&&document.querySelector(".modal-show").classList.remove("modal-show")}),form&&form.addEventListener("submit",function(a){modal=document.querySelector(".modal-write-us");var b=this.querySelector("input[name=name]").value,c=this.querySelector("input[name=mail]").value,d=this.querySelector("textarea[name=\"letter-text\"]").value;b&&c&&d?(localStorage.setItem("name",b),localStorage.setItem("mail",c)):(a.preventDefault(),modal.style.animation="shake 0.3s",setTimeout(()=>{modal.style.animation="none"},500))});
+var slides = document.getElementsByName('promo-slider');
+var isLocalStorage = true, currentSlide = 0;
+var buttonBuy = document.querySelectorAll('.action-buy');
+var writeUsLink = document.querySelector('.write-us-button');
+var mapLink = document.querySelector('.map');
+var modal;
+var nextSlideButton = document.querySelector('.next-slide');
+var previousSlideButton = document.querySelector('.prev-slide');
+var form = document.querySelector('.modal-write-us form');
+var userName, userEmail;
+
+try {
+  userName = localStorage.getItem('name');
+  userEmail = localStorage.getItem('mail')
+}
+catch (e) {
+  isLocalStorage = false;
+}
+
+if (writeUsLink){
+  writeUsLink.addEventListener('click', function (event) {
+    event.preventDefault();
+    modal = document.querySelector('.modal-write-us');
+    // modal.style.animation = 'modal-open 0.5s';
+    modal.classList.add("modal-show");
+    modal.querySelector('input[name=name]').focus();
+    if (isLocalStorage){
+      if (userName) {
+        modal.querySelector('input[name=name]').value = userName;
+        modal.querySelector('input[name=mail]').focus();
+      }
+      if (userEmail) {
+        modal.querySelector('input[name=mail]').value = userEmail;
+        modal.querySelector('textarea[name=letter-text]').focus();
+      }
+    }
+
+    modal.querySelector('.close').addEventListener('click', function (event) {
+      event.preventDefault();
+      modal.classList.remove("modal-show");
+    });
+  })
+}
+
+if (mapLink){
+  mapLink.addEventListener('click', function (event) {
+    event.preventDefault();
+    modal = document.querySelector('.popup-map');
+    modal.classList.add("modal-show");
+    modal.querySelector('.close').addEventListener('click', function (event) {
+      event.preventDefault();
+      modal.classList.remove("modal-show")
+    });
+  });
+}
+
+
+for (var i = 0; i < buttonBuy.length; i++){
+  var btn = buttonBuy[i];
+  btn.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    modal = document.querySelector('.modal-order');
+    modal.classList.add("modal-show");
+    modal.querySelector('.close').addEventListener('click', function (event) {
+      event.preventDefault();
+      modal.classList.remove("modal-show");
+    });
+    modal.querySelector('.continue-shopping').addEventListener('click', function (event) {
+      event.preventDefault();
+      modal.classList.remove("modal-show");
+    })
+  })
+}
+
+
+
+function check() {
+  for(var i =0; i < slides.length; i++){
+    if(slides[i].checked) currentSlide = i;
+  }
+
+}
+
+previousSlideButton.addEventListener('click', function (event) {
+  event.preventDefault();
+  check();
+  if(++currentSlide >= slides.length) currentSlide = 0;
+  slides[currentSlide].checked = true;
+});
+
+nextSlideButton.addEventListener('click', function (event) {
+  event.preventDefault();
+  check();
+  if(--currentSlide < 0) currentSlide = slides.length - 1;
+  slides[currentSlide].checked = true;
+});
+
+window.addEventListener('keydown', function (event) {
+  if(event.keyCode === 27) document.querySelector('.modal-show').classList.remove('modal-show');
+});
+
+if (form){
+  form.addEventListener('submit', function (event) {
+    modal = document.querySelector('.modal-write-us');
+    var name = this.querySelector('input[name=name]').value,
+      mail =this.querySelector('input[name=mail]').value,
+      letter = this.querySelector('textarea[name="letter-text"]').value;
+    if (name && mail && letter){
+      localStorage.setItem('name', name);
+      localStorage.setItem('mail', mail);
+    }
+    else {
+      event.preventDefault();
+      modal.style.animation = 'shake 0.3s';
+      setTimeout(function () {
+        modal.style.animation = 'modal-open 0s'
+      },500);
+    }
+  });
+}
+
