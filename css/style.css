@@ -19,7 +19,7 @@ body{
 
 img{
   max-width: 100%;
-  /*height: auto;*/
+  height: auto;
 }
 
 .button-red{
@@ -1409,7 +1409,7 @@ a.login-link:active::before{
   height: 158px;
   margin-bottom: 40px;
 
-  background-color: #fff;
+  background-color: #f0ece6;
 }
 
 .write-us-button{
@@ -2456,10 +2456,7 @@ a.active-function:hover{
 
 .modal-show{
   display: block;
-  -webkit-animation-name: modal-open;
-  animation-name: modal-open;
-  -webkit-animation-duration: 0.5s;
-  animation-duration: 0.5s;
+  animation: modal-open .5s;
 }
 
 
@@ -2478,12 +2475,7 @@ a.active-function:hover{
   100% { -webkit-transform: translateY(0px); transform: translateY(0px);}
 }
 
-.modal-shake{
-  -webkit-animation-name: shake;
-  animation-name: shake;
-  -webkit-animation-duration: 0.3s;
-  animation-duration: 0.3s;
-}
+
 
 @-webkit-keyframes shake {
   0% { -webkit-transform: translateX(0); transform: translateX(0);}
@@ -2499,6 +2491,10 @@ a.active-function:hover{
   60% { -webkit-transform: translateX(-10px); transform: translateX(-10px);}
   80% { -webkit-transform: translateX(10px); transform: translateX(10px);}
   100% { -webkit-transform: translateX(0); transform: translateX(0);}
+}
+
+.modal-shake{
+  animation: shake .3s;
 }
 
 .not-emty{

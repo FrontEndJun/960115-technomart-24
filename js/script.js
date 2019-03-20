@@ -21,7 +21,6 @@ if (writeUsLink){
   writeUsLink.addEventListener('click', function (event) {
     event.preventDefault();
     modal = document.querySelector('.modal-write-us');
-    // modal.style.animation = 'modal-open 0.5s';
     modal.classList.add("modal-show");
     modal.querySelector('input[name=name]').focus();
     if (isLocalStorage){
@@ -38,6 +37,7 @@ if (writeUsLink){
     modal.querySelector('.close').addEventListener('click', function (event) {
       event.preventDefault();
       modal.classList.remove("modal-show");
+      modal.classList.remove('modal-shake');
     });
   })
 }
@@ -96,7 +96,11 @@ nextSlideButton.addEventListener('click', function (event) {
 });
 
 window.addEventListener('keydown', function (event) {
-  if(event.keyCode === 27) document.querySelector('.modal-show').classList.remove('modal-show');
+  modal = document.querySelector('.modal-show');
+  if(event.keyCode === 27){
+    modal.classList.remove('modal-show');
+    modal.classList.remove('modal-shake');
+  }
 });
 
 if (form){
@@ -111,10 +115,9 @@ if (form){
     }
     else {
       event.preventDefault();
-      modal.style.animation = 'shake 0.3s';
-      setTimeout(function () {
-        modal.style.animation = 'modal-open 0s'
-      },500);
+      modal.classList.remove('modal-shake');
+      modal.offsetWidth = modal.offsetWidth;
+      modal.classList.add('modal-shake');
     }
   });
 }
@@ -130,3 +133,4 @@ document.addEventListener("DOMContentLoaded", function (event) {
     modal.style.opacity = '1';
   },3000);
 } );
+
